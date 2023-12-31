@@ -95,7 +95,7 @@ const condition = document.querySelector('.condition');
 // creating function to fetch data once button is clicked
 async function searchResult(searchTerm) {
   const key = '9cd9ef8afd014c7f99f223758232912'
-  const searchUrl = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${searchTerm}&aqi=no`
+  const searchUrl = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${searchTerm}&aqi=no`
   try {
     const response = await fetch(searchUrl);
     const data = await response.json();
