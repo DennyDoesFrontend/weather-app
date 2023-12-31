@@ -1,2 +1,2 @@
 # weather-app
-Weather App built with JS and the WeatherAPI
+Weather App built with tailwind-css and JS. Uses the Weather API to get weather data, uses the leaflet.js library to render a map on the screen, uses IPIFY API to get the ipAdress of the place and then uses the leaflet.js marker object to show specific locations of places on the map as well as providing weather info below. There is also a little joke teller which uses a simple jokes API to render jokes at the click of the button. 
