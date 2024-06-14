@@ -10,14 +10,13 @@ const cloud = document.querySelector(".cloud");
 const inputValue = document.querySelector(".input-value");
 const btn = document.querySelector(".button");
 const apiKey = "9cd9ef8afd014c7f99f223758232912";
-let myLocation = inputValue.value;
 let documentBody = document.querySelector("body");
 const results = document.querySelector(".results");
 
-async function fetchData() {
+async function fetchData(location) {
   try {
     const response = await fetch(
-      `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${myLocation}`
+      `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`
     );
     if (!response.ok) {
       throw new Error("Problem Fetching Data");
@@ -38,10 +37,10 @@ async function fetchData() {
 }
 
 btn.addEventListener("click", () => {
+  const myLocation = inputValue.value;
   if (myLocation) {
-    myLocation = inputValue.value;
     results.style.display = "flex";
-    fetchData();
+    fetchData(myLocation);
   } else {
     alert("Please input a location to search");
   }
