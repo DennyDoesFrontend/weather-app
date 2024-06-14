@@ -17,7 +17,7 @@ const results = document.querySelector(".results");
 async function fetchData() {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${myLocation}`
+      `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${myLocation}`
     );
     if (!response.ok) {
       throw new Error("Problem Fetching Data");
